@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.3" prefHeight="451.0" prefWidth="561.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chat.ChatAppController">
+   <items>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="168.0">
+         <children>
+            <ListView fx:id="contactList" layoutX="-1.0" layoutY="78.0" prefHeight="369.0" prefWidth="163.0" style="-fx-background-color: #ede1e9;" />
+                <Label layoutX="18.0" layoutY="14.0" prefHeight="26.0" prefWidth="137.0" text="Contacts List">
+               <font>
+                  <Font name="Bodoni MT Bold Italic" size="21.0" />
+               </font></Label>
+                <Button layoutX="33.0" layoutY="49.0" onAction="#addContact" style="-fx-background-color: #c5d6e8;" text="Add" />
+                <Button layoutX="101.0" layoutY="49.0" onAction="#deleteContact" style="-fx-background-color: #e9d3f2;" text="Delete" />
+         </children></AnchorPane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #ede1e9;">
+         <children>
+            <ListView fx:id="messageList" layoutX="4.0" layoutY="11.0" prefHeight="362.0" prefWidth="382.0" />
+            <TextArea fx:id="messageInput" layoutX="28.0" layoutY="384.0" prefHeight="45.0" prefWidth="271.0" promptText="Enter your message..." />
+            <Button fx:id="sendButton" layoutX="320.0" layoutY="391.0" onAction="#sendMessage" style="-fx-background-color: #c5d6e8;" text="Send" />
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>
